@@ -2,13 +2,13 @@ class String_int_array
   attr_accessor :input 
   
   def initialize(input)
-    @input=input
+    @input = input
   end
   
   def sum_of_digits(num)
     sum = 0
     
-    while( num > 0 )
+    while(num > 0)
       digit = num % 10
       sum += digit
       num /= 10
@@ -19,7 +19,7 @@ class String_int_array
 
   def weight_sort
     @input = @input.map(&:to_i)
-    @input = @input.sort_by{ |int| sum_of_digits(int) }
+    @input = @input.sort_by{|int| sum_of_digits(int)}
 	
     i = 0
     output = []
@@ -32,7 +32,7 @@ class String_int_array
         i += 1
       end
   
-      temp = temp.sort_by{|x| x.to_s }
+      temp = temp.sort_by{|x| x.to_s}
   
       for x in temp
         output << x
