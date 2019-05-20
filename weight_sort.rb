@@ -1,4 +1,4 @@
-class String_int_array
+class ArrayOfStringInt
   attr_accessor :input 
   
   def initialize(input)
@@ -48,8 +48,8 @@ end
 
 
 str = gets()
-ob1 = String_int_array.new(str.split())
+ob1 = ArrayOfStringInt.new(str.split())
 
 ob1.weight_sort
 
-print(ob1.input)
+print(ob1.input,"\n")
